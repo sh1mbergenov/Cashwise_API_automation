@@ -5,10 +5,10 @@ import io.cucumber.testng.CucumberOptions;
 import org.testng.annotations.DataProvider;
 
 @CucumberOptions(
-        plugin = "html:target/reports/cucumberReport.html",
+        plugin = {"html:target/reports/cucumberReport.html","json:target/reports/cucumber.json"},
         features = "src/test/resources",
         glue = "steps",
-        tags = "@getInvoice",
+        tags = "@regression",
         dryRun = false
 )
 
